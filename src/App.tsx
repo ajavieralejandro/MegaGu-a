@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { BusinessPage } from './pages/BusinessPage';
 import { CategoriesPage } from './pages/CategoriesPage';
@@ -10,7 +10,7 @@ import { SearchPage } from './pages/SearchPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
